@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/parts/login.css">
+
+</head>
+<body>
+    
+  <%- include('parial/header'); -%>
+    <div class="login-form">
+        <form method="post" id="loginform" action="authUser">
+            <h1>Login</h1>
+            <div class="content">
+        <div class="input-field">
+            <input type="email" placeholder="Email" name="email" autocomplete="nope">
+        </div>
+        <div class="input-field">
+            <input type="password" placeholder="Password" name="password" autocomplete="new-password">
+        </div>
+        <a href="#" class="link">Forgot Your Password?</a>
+    </div>
+    <div class="action">
+        <button> <a href="register"></a> Register</button>
+        <button type="submit">Sign in</button>
+    </div>
+</form>
+</div>
+</script>
+</body>
+</html>
