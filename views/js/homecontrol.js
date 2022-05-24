@@ -1,5 +1,6 @@
 const advancedSearch = document.getElementById("advancedS")
 const countrySearch = document.getElementById("countryS")
+const mapSearch = document.getElementById("mapS")
 
 const advancedBtn = document.getElementById("advancedbtn")
 const mapBtn = document.getElementById("mapbtn")
@@ -9,19 +10,34 @@ run()
 
 function run (){
     advancedBtn.addEventListener('click', ()=>{
-        advancedSearch.style.cssText="transform: translateX(0); transition: 1s; opacity: 1";
-        countrySearch.style.cssText="transform: translateX(-200vh); transition: 1s; opacity: 0";
+        advancedSearch.style.cssText="transform: translateX(0); transition: 0.5s; opacity: 1";
+        mapSearch.style.cssText="transform: translateX(-200vh); transition: 0.5s; opacity: 0";
+        countrySearch.style.cssText="transform: translateX(-200vh); transition: 0.5s; opacity: 0";
         countryBtn.style.background="#4193C7";
+        mapBtn.style.background="#4193c7";
         advancedBtn.style.background="white";
+
     })
     mapBtn.addEventListener('click', ()=>{
         console.log("map Btn clicked");
+        advancedSearch.style.cssText="transform: translateX(-200vh); transition: 0.5s; opacity: 0";
+        countrySearch.style.cssText="transform: translateX(-200vh); transition: 0.5s; opacity: 0";
+        mapSearch.style.cssText="transform: translateX(0); transition: 0.5s; opacity: 1";
+
+        advancedBtn.style.background="#4193C7";
+        countryBtn.style.background="#4193c7";
+        mapBtn.style.background="white";
+
+
     })
     countryBtn.addEventListener('click', ()=>{
-        advancedSearch.style.cssText="transform: translateX(-200vh); transition: 1s; opacity: 0";
-        countrySearch.style.cssText="transform: translateX(0); transition: 1s; opacity: 1";
+        advancedSearch.style.cssText="transform: translateX(-200vh); transition: 0.5s; opacity: 0";
+        mapSearch.style.cssText="transform: translateX(-200vh); transition: 0.5s; opacity: 0";
+        countrySearch.style.cssText="transform: translateX(0); transition: 0.5s; opacity: 1";
         advancedBtn.style.background="#4193C7";
+        mapBtn.style.background="#4193c7";
         countryBtn.style.background="white";
+
         
     })
 }
@@ -195,3 +211,4 @@ function switchThem(){
   switchThem();
   
   
+

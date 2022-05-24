@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/parts/home.css">
 
-    <title><%= title %></title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/parts/home.css">
+
+  <title><%= title %></title>
 </head>
+
 <body style="margin: 0;">
   <%- include('parial/header'); -%>
-  <div id="seatWindow" style="display: none; position: fixed; width: 100vw; height: 100vh; margin: auto; top: 0; z-index: 1; background: #9999;">
+  <div id="seatWindow"
+    style="display: none; position: fixed; width: 100vw; height: 100vh; margin: auto; top: 0; z-index: 1; background: #9999;">
     <%- include('parial/seat'); -%>
   </div>
-  
+
   <div class="app">
+    <i class="fa-solid fa-xmark-large"></i>
+
     <div class="switch-cont">
       <p class="text-switch">Dark theme </p>
       <div class="thebtn">
 
-          <input type="checkbox" hidden="hidden" id="username">
-          <label class="switch" for="username"></label>
+        <input type="checkbox" hidden="hidden" id="username">
+        <label class="switch" for="username"></label>
       </div>
-  </div>
+    </div>
 
-        
-        <div class="form-home">
-          <div class="optionBtn">
-            <button class="advancedSearch" id="advancedbtn">Advanced search</button>
-            <button class="mapSearch" id="mapbtn">map Search</button>
-            <button class="countrySearch" id="countrybtn">country Search</button>
+
+    <div class="form-home">
+      <div class="optionBtn">
+        <button class="advancedSearch" id="advancedbtn">Advanced search</button>
+        <button class="mapSearch" id="mapbtn">map Search</button>
+        <button class="countrySearch" id="countrybtn">country Search</button>
+      </div>
+      <div class="forms-con">
+
+        <!-- advanced search window -->
+
+        <form id="advancedS" action="api" method="POST">
+          <div class="title_form">
+            <h1 class="title">Advanced search</h1>
           </div>
-            <div class="forms-con">
+          <div class="inputs">
 
-            <form id="advancedS" action="api" method="POST">
-                <div class="title_form">
-                  <h1 class="title">Advanced search</h1>
-                </div>
-                  <div class="inputs">
-                
-                    <div class="departure">
-                      <label for="depInput">Departure name</label>
-                      <input type="text" class="dep" name="departure" id="depInput" placeholder="Departure..."
-                      value="<%= typeof departure != 'undefined' ? departure : '' %>">
-                      <label for="depDate">Departure Date</label>
-                      <input type="date" class="depDate" id="depDate">
-                  
-                    </div>
-                    <div class="destination">
-                      <label for="desInput">Destination name</label>
-                      <input 
-                      type="text" 
-                      class="des" 
-                      name="destination" 
-                      id="desInput" 
-                      placeholder="Destination..."
-                      value="<%= typeof destination != 'undefined' ? destination : '' %>">
-                      
-                      <label for="desDate">Destination Date</label>
-                      <input type="date" class="desDate" id="desDate">
-                    </div>
-                    
-                </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" value="tur-retur"> Tur-retur
-                    </label>
-                  </div>
-                  <!--
+            <div class="departure">
+              <label for="depInput">Departure name</label>
+              <input type="text" class="dep" name="departure" id="depInput" placeholder="Departure..."
+                value="<%= typeof departure != 'undefined' ? departure : '' %>">
+              <label for="depDate">Departure Date</label>
+              <input type="date" class="depDate" id="depDate">
+
+            </div>
+            <div class="destination">
+              <label for="desInput">Destination name</label>
+              <input type="text" class="des" name="destination" id="desInput" placeholder="Destination..."
+                value="<%= typeof destination != 'undefined' ? destination : '' %>">
+
+              <label for="desDate">Destination Date</label>
+              <input type="date" class="desDate" id="desDate">
+            </div>
+
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="tur-retur"> Tur-retur
+            </label>
+          </div>
+          <!--
                   <h1 style="color: #999;">Search by country name</h1>
 
                   <div class="nameSearch" style="border-top: 1px solid #9999; padding: 1rem;">
@@ -84,48 +86,57 @@
                     
                   </div>
                 -->
-                <div class="btn">
-                  <button class="searchBtn" id="formA" type="submit" >Search</button>
-                </div>
-              
-            </form>
-
-
-            <form id="countryS" style="transform: translateX(-200vh); opacity: 0; transition: 1s;" action="api" method="POST">
-              <div class="title_form">
-                <h1 class="title">Country name search</h1>
-              </div>
-                <div class="inputs">
-              
-                  <div class="departure">
-                    <label for="depInput">Country name</label>
-                    <input type="search" class="dep" name="nameSearch" id="depInput" placeholder="country name..."
-                    value="<%= typeof nameSearch != 'undefined' ? nameSearch : 'Sweden' %>">
-                    <label for="countrydepDate">Departure Date</label>
-                    <input type="date" class="countrydepDate" id="countrydepDate">
-                  </div>
-                  
-                </div>
-                <div class="btn">
-                  <button class="searchBtn" type="submit">Search</button>
-                </div>
-              </form>
+          <div class="btn">
+            <button class="searchBtn" id="formA" type="submit">Search</button>
           </div>
+
+        </form>
+
+        <!-- country search window -->
+
+        <form id="countryS" style="transform: translateX(-200vh); opacity: 0; transition: 0.5s;" action="api"
+          method="POST">
+          <div class="title_form">
+            <h1 class="title">Country name search</h1>
+          </div>
+          <div class="inputs">
+
+            <div class="departure">
+              <label for="depInput">Country name</label>
+              <input type="search" class="dep" name="nameSearch" id="depInput" placeholder="country name..."
+                value="<%= typeof nameSearch != 'undefined' ? nameSearch : 'Sweden' %>">
+              <label for="countrydepDate">Departure Date</label>
+              <input type="date" class="countrydepDate" id="countrydepDate">
+            </div>
+
+          </div>
+          <div class="btn">
+            <button class="searchBtn" type="submit">Search</button>
+          </div>
+        </form>
+
+
+        <!-- map search window -->
+        <div id="mapS" style="transform: translateX(-200vh); opacity: 0; transition: 0.5s;">
           
-          
+          <div class="inputs">
+            <%- include('parial/mapS'); -%>  
+          </div>
         </div>
-        
-        
-        <div class="flightlist-container">
-          <div class="flight-title">
-            <h1 style="color: #999 ">List of flights.</h1>
-          </div>
-          <div id="list"list>
-              no item...
-          </div>
+      </div>
+    </div>
 
-          <%- include('parial/map'); -%>
-          <!--
+
+
+  <!-- result window -->
+  <div class="flightlist-container">
+    <div class="flight-title">
+      <h1 style="color: #999 ">List of flights.</h1>
+    </div>
+    <div id="list" list>
+      no item...
+    </div>
+    <!--
 
             <div class="listOfFlights">
               
@@ -152,9 +163,10 @@
               </div>
             </div>
           -->
-    </div>
-  
-    <script src="ajax.js" async defer></script>
-    <script src="./js/homecontrol.js"></script>
+  </div>
+</div>
+  <script src="./js/homecontrol.js"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,381 @@
+
+<nav class="sidebar snipcss-q38PH">
+    <div class="logo d-flex justify-content-between">
+      <a class="large_logo snip-a" href="/">
+          <i class="fa-solid fa-xmark-large"></i>
+        <img src="../../images/JetStream_Logo_POS.png" alt="" class="snip-img">
+      </a>
+    
+    </div>
+    <ul id="sidebar_menu" class="metismenu snip-ul">
+        <li>
+            <a href="/" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                </div>
+                <div class="nav_title">
+                    <span>Flights</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <!-- open the histroy panel -->
+            <a href="" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <i class="fa-duotone fa-ticket-airline"></i>
+                </div>
+                <div class="nav_title">
+                    <span>History </span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+                <div class="nav_title">
+                    <span>Application </span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="nav_title">
+                    <span>Support </span>
+                </div>
+            </a>
+        </li>
+    
+    
+    
+        <h4 class="menu-text"><span>My info</span> <i class="fas fa-ellipsis-h"></i> </h4>
+        <li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="nav_title">
+                    <span>Profile</span>
+                </div>
+            </a>
+        </li>
+        <li class="">
+            <a class="has-arrow" href="/" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+                <div class="nav_title">
+                    <span>Logout</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+  
+
+<style>
+
+
+* { 
+    box-sizing: border-box;
+} 
+
+body { 
+    margin:  0; 
+    font-family:  mulish,sans-serif; 
+    font-size:  14px; 
+    font-weight:  400; 
+    line-height:  1.5; 
+    color:  #212529; 
+    background-color:  #fff; 
+    -webkit-text-size-adjust:  100%; 
+    -webkit-tap-highlight-color:  transparent;
+    padding: 0; 
+    position: relative; 
+    background: #fbf6f0;
+} 
+
+:root { 
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+} 
+
+@media (prefers-reduced-motion: no-preference){ 
+  :root { 
+    scroll-behavior: smooth;
+  } 
+}     
+
+.sidebar { 
+    height: 100vh;
+    padding-bottom: 50px; 
+    width: 270px; 
+    overflow: hidden; 
+    overflow-y: auto; 
+    background: #fff; 
+    box-shadow: 0 12px 30px rgba(80,143,244,.1); 
+    transition: .3s;
+} 
+
+*,:after,:before { 
+    box-sizing: border-box;
+} 
+
+.sidebar:-webkit-scrollbar,body:-webkit-scrollbar { 
+    width: 6px; 
+    background-color: #ddd;
+} 
+
+.sidebar:-webkit-scrollbar-thumb,body:-webkit-scrollbar-thumb { 
+    background-color: #f8dbdd;
+} 
+
+.sidebar:-webkit-scrollbar-track,body:-webkit-scrollbar-track { 
+    background-color: #ddd;
+} 
+
+.d-flex { 
+    display: flex!important;
+} 
+
+.justify-content-between { 
+    justify-content: space-between!important;
+} 
+
+.sidebar .logo  { 
+    margin: 0; 
+    background: #f3f6f9; 
+    padding: 24px; 
+    margin-bottom: 20px;
+} 
+
+ul { 
+    padding-left:   2rem;
+    margin-top:  0; 
+    margin-bottom:  1rem;
+    margin: 0; 
+    padding: 0;
+} 
+
+a { 
+    color:  #0d6efd; 
+    text-decoration:  none; 
+    -webkit-transition: .5s; 
+    transition: .5s;
+} 
+
+a:hover { 
+    color:  #0a58ca;
+    text-decoration: none;
+} 
+
+.sidebar .small_logo  { 
+    display: none;
+} 
+
+@media (min-width: 992px){ 
+  .d-lg-none { 
+    display: none!important;
+  } 
+}     
+
+li { 
+    list-style: none;
+} 
+
+.sidebar #sidebar_menu > li  { 
+    margin-left: 0;
+} 
+
+h4 { 
+    margin-top:  0; 
+    margin-bottom:  .5rem; 
+    font-weight:  500; 
+    line-height:  1.2;
+    font-size: calc(1.275rem + .3vw);
+} 
+
+@media (min-width: 1200px){ 
+  h4 { 
+    font-size: 1.5rem;
+  } 
+}     
+
+h4 { 
+    color:  #474d58; 
+    font-family:  mulish,sans-serif; 
+    font-weight:  600; 
+    line-height:  1.2;
+    font-size: 20px;
+} 
+
+.sidebar .menu-text  { 
+    font-size: 12px; 
+    color: #b1bdcb; 
+    font-weight: 600; 
+    margin: 0; 
+    padding: 12px 0 12px 24px; 
+    text-transform: uppercase;
+} 
+
+img { 
+    vertical-align: middle;
+} 
+
+.sidebar .logo .large_logo img  { 
+    width: 100px;
+} 
+
+[class^="ti-"] { 
+    font-family: themify; 
+    speak: none; 
+    font-style: normal; 
+    font-weight: 400; 
+    font-variant: normal; 
+    text-transform: none; 
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+} 
+
+.sidebar_close_icon i  { 
+    width: 40px; 
+    height: 40px; 
+    display: inline-block; 
+    text-align: center; 
+    line-height: 40px; 
+    position: absolute; 
+    right: 30px; 
+    font-size: 25px; 
+    top: 29px; 
+    cursor: pointer; 
+    color: #222;
+} 
+
+.ti-close:before { 
+    content: "\e646";
+} 
+
+.sidebar #sidebar_menu > li a  { 
+    font-size: 16px; 
+    font-weight: 400; 
+    color: #8890b5; 
+    padding: 10px 10px 10px 26px; 
+    background: #fff; 
+    transition: .3s; 
+    position: relative; 
+    z-index: 0; 
+    display: grid; 
+    grid-template-columns: 34px auto; 
+    grid-gap: 15px; 
+    align-items: center; 
+    font-family: mulish,sans-serif; 
+    border-radius: 15px;
+} 
+
+.sidebar #sidebar_menu > li > a  { 
+    color: #144339;
+} 
+
+.sidebar #sidebar_menu > li a:after  { 
+    color: #a1a4b9; 
+    transform: rotate(-90deg) translate(0,-50%); 
+    opacity: 1; 
+    font-size: 10px; 
+    right: 15px;
+} 
+
+.sidebar #sidebar_menu > li a:hover  { 
+    color: #f65365!important; 
+    background: #f8fafc;
+} 
+
+.sidebar #sidebar_menu > li a:hover:before  { 
+    width: 6px; 
+    opacity: 1; 
+    visibility: visible;
+} 
+
+.fas { 
+    -moz-osx-font-smoothing:   grayscale; 
+    -webkit-font-smoothing:   antialiased; 
+    display:   inline-block; 
+    font-style:   normal; 
+    font-variant:   normal; 
+    text-rendering:   auto; 
+    line-height:   1;
+    font-family:  "Font Awesome 5 Free";
+    font-weight: 900;
+} 
+
+.sidebar .menu-text i  { 
+    display: none;
+} 
+
+.fa-ellipsis-h:before { 
+    content: "\f141";
+} 
+
+.metismenu .has-arrow  { 
+    position: relative;
+} 
+
+.metismenu .has-arrow:after  { 
+    position: absolute; 
+    content: "\e64b"; 
+    transform: rotate(-90deg) translate(0,-50%); 
+    transform-origin: top; 
+    top: 50%; 
+    transition: all .3s ease-out; 
+    right: 40px; 
+    font-family: themify; 
+    color: #a5adc6; 
+    font-weight: 600; 
+    font-size: 14px;
+} 
+
+ul ul  { 
+    margin-bottom: 0;
+} 
+
+.metismenu .mm-collapse:not(.mm-show) { 
+    display: none;
+} 
+
+.sidebar #sidebar_menu > li ul  { 
+    padding: 0 0 5px 40px; 
+    background: #fff; 
+    border-radius: 0 0 4px 4px; 
+    margin-left: 30px;
+} 
+
+.sidebar #sidebar_menu li a img  { 
+    width: 14px; 
+    height: auto;
+} 
+
+.sidebar #sidebar_menu > li ul li a  { 
+    font-size: 14px; 
+    color: #8890b5; 
+    font-weight: 400; 
+    padding: 10px 0 10px 8px!important; 
+    white-space: nowrap; 
+    margin-top: 0; 
+    margin-left: 0; 
+    text-transform: capitalize;
+} 
+
+.sidebar #sidebar_menu > li ul li a:before  { 
+    display: none;
+} 
+
+.sidebar #sidebar_menu > li ul li:last-child a  { 
+    padding-bottom: 30px;
+} 
+
+
+</style>

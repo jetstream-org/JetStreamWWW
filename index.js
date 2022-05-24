@@ -44,6 +44,13 @@ app.get('/login', (req, res)=>{
     })
 })
 
+
+app.get('/app', (req, res)=>{
+    res.render('app',{
+        title: 'Download app'
+    })
+})
+
 app.post('/api', async(req, res)=>{
     const {departure, destination, depDate, desDate, nameSearch} = req.body
     try {

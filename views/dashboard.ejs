@@ -1,4 +1,28 @@
-<h1>Welcome to user dashboard</h1>
 
 
-<%- include('parial/map'); -%>
+<div class="dash-container">
+    <div class="nav">
+        <%- include('parial/dashboard/dash-header'); -%>
+    </div>
+    <section class="content">
+        <div class="history" style="margin-left: 50px;">
+            <%- include('parial/dashboard/dash-history'); -%>    
+        </div>
+        <div class="support">
+            
+        </div>
+    </section>
+</div>
+
+
+
+<style>
+
+    .dash-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+</style>
+
+
