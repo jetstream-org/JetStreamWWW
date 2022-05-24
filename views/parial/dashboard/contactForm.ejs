@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="../styles/parts/contact.css">
+
+<div class="contact-support">
+    <div class="contact-inner">
+        <form method="" id="" action="">
+            <div class="">
+                <div class="input-field">
+                    <p>Title</p>
+                    <input type="text" placeholder="Title" name="contact-title" autocomplete="">
+                </div>
+                <div class="input-field">
+                    <p>Email</p>
+                    <input type="email" placeholder="Email" name="" id="comtact-email" autocomplete="">
+                </div>
+                <div class="input-field">
+                    <p>Text</p>
+                    <textarea name="contact-text" id="" placeholder="Text" cols="55" rows="8"></textarea>
+                </div>
+            </div>
+        </form>
+    <div class="contact-action">
+        <button class="send-btn" id="contact-send-btn" type="submit"> <a href="" ></a>Send</button>
+    </div>
+</div>
+
+<script>
+
+    var sendContactBtn = document.getElementById("contact-send-btn");
+
+    sendContactBtn.addEventListener("click", (e)=>{ 
+        e.preventDefault();
+
+        var email = document.getElementById("comtact-email");
+        email = "";
+
+        //if(email === "") {
+            //console.log("in 1")
+            //alert("Email is null!");
+        //} else {
+           //console.log("in 2")
+            //alert(email);
+        //}
+
+    });
+
+    //function isEmpty(str) {
+    //    return (str.length < 0 );
+    //}
+
+</script>
