@@ -44,6 +44,13 @@ app.get('/login', (req, res)=>{
     })
 })
 
+app.get('/contact', (req, res)=>{
+    console.log("contact opens")
+    res.render('contact',{
+        title: 'Contact'
+    })
+})
+
 
 app.get('/app', (req, res)=>{
     res.render('app',{

@@ -1,0 +1,99 @@
+<div class="float-container">
+
+    <div class="float-child">
+        <h1>Profile image</h1>
+        <img src="./images/user.png" alt="">
+    </div>
+
+    <div class="float-child">
+        <h1>Profile details</h1>
+        <form action="">
+            <p>Firstname</p>
+            <input type="text" placeholder="Firstname" autocomplete="" value="Jetstream" disabled>
+
+            <p>Lastname</p>
+            <input type="email" placeholder="Lastname" autocomplete="" value="Setstreamsdotter" disabled>
+
+            <p>Address</p>
+            <input type="email" placeholder="Address" autocomplete="" value="Malmö universitet" disabled>
+
+            <p>Email</p>
+            <input type="text" placeholder="Email" autocomplete="" value="jetstream@gmail.com" disabled>
+
+            <p>Phone number</p>
+            <input type="text" placeholder="Phone number" autocomplete="" value="0763649634" disabled>
+        </form>
+    </div>
+
+    
+
+    <div class="float-child">
+        <h1>Change password</h1>
+        <form action="">
+            <p>Old password</p>
+            <input type="password" placeholder="Old password" autocomplete="">
+
+            <p>New password</p>
+            <input type="password" placeholder="New password" autocomplete="">
+
+            <p>Confirm password</p>
+            <input type="password" placeholder="Confirm password" autocomplete="">
+        </form>
+    </div>
+    
+</div>
+
+
+<div class="float-container">
+    <div class="float-child">
+        <button class="pfp-btn">Chage image</button>
+        <button class="pfp-btn">Edit profile</button>
+        <button class="pfp-btn">Change password</button>
+    </div>
+</div>
+
+
+
+
+<style>
+
+    .float-container {
+        width: auto;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 20px;
+    }
+
+    .float-child img {
+        width: 10rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pfp-btn {
+        margin-top: 20px;
+        width: 8vh;
+        height: 4vh;
+        cursor: pointer;
+        margin-left: 2vh;
+        background-color: #6BCB77;
+        border-radius: 3px;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .pfp-btn:hover {
+        background: #d8d8d8;
+    }
+    
+
+    .float-child {
+        padding: 20px;
+        margin: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        box-shadow: 0px 10px 16px #cccccc;
+    } 
+</style>
