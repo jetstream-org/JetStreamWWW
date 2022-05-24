@@ -120,7 +120,7 @@ $('#countryS').submit(function(){
                             <p>${result.rows[i].f_destination_date} |${ result.rows[i].f_destination_time }</p>
                             <div class="btn-cont">
                             <h2>${result.rows[i].f_price} SEK</h2>
-                            <button class="searchBtn" id="${result.rows[i].f_id}" onclick="seatWindowOpen()">Detailes</button>
+                            <a href="/seat"><button class="searchBtn" id="${result.rows[i].f_id} onclick="${seatWindowOpen()}"> Detailes</button>
                             </div>
                         </div>
                     </div>
@@ -149,9 +149,8 @@ $('#countryS').submit(function(){
 */
 
 
-const seatWin = document.getElementById("seatWindow");
 function seatWindowOpen(){
-    seatWin.style.display = "flex";
+    
 }
 
 function seatWindowClose(){

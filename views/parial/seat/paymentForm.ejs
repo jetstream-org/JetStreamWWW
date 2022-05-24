@@ -1,0 +1,75 @@
+<div class="seat-cont">
+    <div class="seat-form-info">
+        <div class="seat-title">
+            <h2>Payment step</h2>
+        </div>
+        <div class="inputs">
+            <input type="text" name="psName" placeholder="2424 - 2424 - 2424 - 2424">
+            <input type="text" name="psLname" placeholder="Cardholder first name">
+            <input type="text" name="psSSN" placeholder="Cardholder last name">
+            <input type="text" name="psEmail" placeholder="Expire date (year/month)">
+            <input type="text" name="psSeatno" placeholder="CVC nummer">
+            <input type="checkbox" name="acceptpolecyBox">
+            <input type="text" name="psPrice" placeholder="price">
+        </div>
+
+        
+    </div>
+    <div class="seat-item">
+        <img src="../../images/payment/security_payment4.gif" alt="">
+    </div>
+</div>
+
+<style>
+
+    .seat-cont{
+        width: 100%;
+        height: 60vh;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .seat-cont .seat-form-info{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: left;
+        gap: 1rem;
+        flex: 1;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .seat-cont .seat-form-info .seat-title, .seat-item .seat-item-title {
+        color: #999;
+    }
+
+    .seat-cont .seat-form-info .inputs{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    .seat-cont .seat-form-info .inputs input{
+        background-color: white;
+        border: 1px solid #9999;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+
+    }
+    
+    .seat-cont .seat-item{
+        display: flex;
+        width: 100%;
+        flex: 1;
+        padding: 1rem;
+
+    }
+
+
+</style>
