@@ -44,10 +44,20 @@ app.get('/login', (req, res)=>{
     })
 })
 
+
+app.get('/seat', (req, res)=>{
+    res.render('seat',{
+        title: 'Ticket'
+      
+    })
+})
+
+
 app.get('/contact', (req, res)=>{
     console.log("contact opens")
     res.render('contact',{
         title: 'Contact'
+
     })
 })
 
@@ -114,6 +124,7 @@ app.post('/authUser', async(req, res)=>{
         console.log("authentication is begin")
         const {email, password} = req.body
         if(email != undefined && password != undefined){
+            console.log("email and pass is not undefiend")
             let hash = md5(password);
             console.log(hash + " hashed one!")
             await pool.query("set search_path to jetstream;")

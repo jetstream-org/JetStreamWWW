@@ -1,0 +1,4 @@
+<div id="seatWindow"
+    style="display: none; position: fixed; width: 100vw; height: 100vh; margin: auto; top: 0; z-index: 1; background: #9999;">
+    <%- include('parial/seat'); -%>
+  </div>

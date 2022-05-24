@@ -1,0 +1,95 @@
+<!doctypehtml>
+    <html>
+
+    <head>
+        <title> Bootstrap wizard tutorial </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <style>
+            .steps {
+                padding: 4%;
+                width: 70%;
+                margin: auto;
+            }
+            .active{
+                color: #ff9000;
+            }
+
+            a[href="#step-1"].active, a[href="#step-2"].active, a[href="#step-3"].active {
+                color: #ff9000 !important;   
+                background-color: white !important;
+            }
+
+            .nav a{
+                color: #ff9000;  
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div class="steps">
+            <h1 style="color: #333;">Prochasing ticket</h1>
+
+        <div id="smartwizard">
+            <ul class="nav">
+               <li>
+                   <a class="nav-link" href="#step-1">
+                    <i class="fa-brands fa-avianex"></i> Chose a seat
+                   </a>
+               </li>
+               <li>
+                   <a class="nav-link" href="#step-2">
+                    <i class="fa-solid fa-credit-card"></i> Payment
+                   </a>
+               </li>
+               <li>
+                   <a class="nav-link" href="#step-3">
+                    <i class="fa-solid fa-circle-check"></i> Complete
+                   </a>
+               </li>
+            </ul>
+         
+            <div class="tab-content">
+                <form action="">
+                    <div id="step-1" class="tab-pane" role="tabpanel">
+                        <%- include('parial/seat/seatForm'); -%>
+                    </div>
+                    <div id="step-2" class="tab-pane" role="tabpanel">
+                        <%- include('parial/seat/paymentForm'); -%>
+                        
+                        
+                    </div>
+                    <div id="step-3" class="tab-pane" role="tabpanel">
+                        <%- include('parial/seat/complete'); -%>
+                        
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+        <!-- CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+    
+            // SmartWizard initialize
+            $('#smartwizard').smartWizard();
+             });
+        </script>
+
+
+
+
+    </body>
+    </html>
