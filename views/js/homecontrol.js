@@ -26,7 +26,8 @@ function run (){
 
         advancedBtn.style.background="#4193C7";
         countryBtn.style.background="#4193c7";
-        mapBtn.style.background="white";
+        mapBtn.style.background="#112";
+        mapBtn.style.color = "white"
 
 
     })
@@ -37,6 +38,7 @@ function run (){
         advancedBtn.style.background="#4193C7";
         mapBtn.style.background="#4193c7";
         countryBtn.style.background="white";
+        countryBtn.style.color = "#333"
 
         
     })
@@ -72,8 +74,10 @@ $('#advancedS').submit(function(){
                        
                         <div class="btn-cont">
                             <h2>${result.rows[i].f_price} SEK</h2>
-                            <button class="searchBtn" id="${result.rows[i].f_id}" onclick="seatWindowOpen()">Detailes</button>
-                        </div>
+                            <a href="/seat" class="detailBtn" id="${result.rows[i].f_id}">
+                                <button class="searchBtn" id="${result.rows[i].f_id}" onclick="seatWindowOpen()">Detailes</button>
+                            </a>
+                            </div>
 
                         </div>
                         </div>
@@ -120,7 +124,7 @@ $('#countryS').submit(function(){
                             <p>${result.rows[i].f_destination_date} |${ result.rows[i].f_destination_time }</p>
                             <div class="btn-cont">
                             <h2>${result.rows[i].f_price} SEK</h2>
-                            <a href="/seat"><button class="searchBtn" id="${result.rows[i].f_id} onclick="${seatWindowOpen()}"> Detailes</button>
+                            <a href="/seat/${result.rows[i].f_id}" ><button class="searchBtn" > Detailes</button></a>
                             </div>
                         </div>
                     </div>
@@ -144,15 +148,23 @@ $('#countryS').submit(function(){
 
 
 
+
+
+
+
+
+
 /*
     toggle seat window
 */
 
 
-function seatWindowOpen(){
-    
-}
-
+function seatWindowOpen(atr){
+        console.log("inside this function")
+        console.log(atr)
+        
+        return false;
+    }
 function seatWindowClose(){
     seatWin.style.display = "none";
 }

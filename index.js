@@ -45,11 +45,32 @@ app.get('/login', (req, res)=>{
 })
 
 
+
 app.get('/seat', (req, res)=>{
+    console.log("login opens")
     res.render('seat',{
         title: 'Ticket'
-      
     })
+})
+
+
+app.get('/seat/:id', async (req, res)=>{
+    const id = req.params.id;
+    console.log(id);
+    if(!id){
+        return
+    }
+
+    
+    await pool.query("set search_path to jetstream;")
+    result = await pool.query("select * from seats where f_id = $1", [id])
+    console.log(result.rows)
+    
+    res.render('seat',{
+        title: 'Ticket',
+        info: result
+    })
+    
 })
 
 

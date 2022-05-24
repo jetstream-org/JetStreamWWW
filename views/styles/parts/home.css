@@ -30,6 +30,7 @@
 .form-home .optionBtn button{
   border-radius: 0.5rem 0.5rem 0 0;
   background: #4193C7;
+  color: #333;
   padding: 1rem 2rem;
   cursor: pointer;
   border: 0;
@@ -38,6 +39,7 @@
 
 .form-home .optionBtn button:first-child{
   background-color: white;
+  color: #333;
   transition: 0.5s;
 }
 
@@ -60,7 +62,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 10px 18px #acacac;
+  box-shadow: 0 50px 150px -50px #00000025;
 }
 
 #mapS{
@@ -73,6 +75,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 50px 150px -50px #0f13f334;
+
 }
 
 #mapS .inputs{
@@ -90,7 +94,7 @@
 }
 
 .title{
-  color: #999;
+  color: #333;
 }
 
 .form-home form .inputs{
