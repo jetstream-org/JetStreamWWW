@@ -1,28 +1,76 @@
-
-
 <div class="dash-container">
     <div class="nav">
         <%- include('parial/dashboard/dash-header'); -%>
     </div>
     <section class="content">
-        <div class="history" style="margin-left: 50px;">
+       
+        <div id="history" style="margin-left: 50px;">
             <%- include('parial/dashboard/dash-history'); -%>    
         </div>
-        <div class="support">
-            
+    
+        <div id="profile" style="margin-left: 50px;">
+            <%- include('parial/dashboard/dash-profile'); -%>  
+        </div>
+        <div id="support" style="margin-left: 50px;">
+            <%- include('parial/dashboard/contactForm'); -%> 
         </div>
     </section>
 </div>
 
-
-
 <style>
-
     .dash-container{
         width: 100%;
         height: 100%;
         display: flex;
     }
+
+    #history{ 
+        display: flex;
+        flex-direction: column;
+    }
+
+    #support{ 
+        display: none;
+        flex-direction: column;
+    }
+
+    #profile{ 
+        display: none;
+        flex-direction: column;
+    }
 </style>
 
+<script>
 
+    /************ Shitch ************/
+
+    const btn = document.querySelectorAll(".dash-link");
+
+    function switchWindow() {
+        btn.forEach(el => {
+            //console.log("Inside 1");
+            el.addEventListener("click", (e)=>{
+                //console.log(e.currentTarget);
+                //console.log(e.currentTarget.name);
+                if(e.currentTarget.name == "history") {
+                    document.getElementById("history").style.display = "flex";
+                    document.getElementById("support").style.display = "none";
+                    document.getElementById("profile").style.display = "none";
+                } 
+                else if(e.currentTarget.name == "support") {
+                    document.getElementById("history").style.display = "none";
+                    document.getElementById("support").style.display = "flex";
+                    document.getElementById("profile").style.display = "none";
+                }
+                else if(e.currentTarget.name == "profile") {
+                    console.log("profile");
+                    document.getElementById("history").style.display = "none";
+                    document.getElementById("support").style.display = "none";
+                    document.getElementById("profile").style.display = "flex";
+                }
+            });        
+        })
+    }
+    switchWindow();
+
+</script>
