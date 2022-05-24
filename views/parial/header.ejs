@@ -1,80 +1,4 @@
-<!--
-<div class="head-cont">
-    <div class="head-intro">
-        <div class="head-logo">
-            <img src="../images/JetStream_Ikon.png" alt="icon" draggable="false">
-            <p>JetStream</p>
-        </div>
-        <div class="head-items">
-            <a href="/" class="item">Home</a>
-            <a href="#" class="item">Donwload app</a>
-            <a href="#" class="item">Community</a>
-        </div>
-        <div class="head-extra-info">
-            <a href="login" class="item">Login</a>
-            <a href="#" class="item">Register</a>
-        </div>
-    </div>
-</div>
 
-
-
-<style>
-    .head-cont{
-        height: 7vh;
-        width: 100%;      
-    }
-    .head-intro{
-        width: 90%;
-        height: 100%;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        align-items: center;
-    }
-
-    .head-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        color: #333;
-    }
-    .head-logo img{
-
-        width: 50px;
-    }
-
-
-    .head-items{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .head-extra-info{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-    .head-items a{
-        padding: 0.5rem 1rem;
-        background: #eee;
-        text-decoration: none;
-        color: #333;
-        transition: 0.2s;
-    }
-    .head-items a:hover{
-        background: white;
-        border-radius: 1rem;
-        transition: 0.2s;
-    }
-</style>
--->
 <header class="flex justify-center items-center bg-transparent text-header-text py-3 relative z-50 top-0 fixed snipcss-P7ijH" data-v-4418274f="">
     <div class="container-wrapper" data-v-638cc598="" data-v-4418274f="">
       <div class="app-container flex justify-between items-center box-border" data-v-81ac646c="" data-v-4418274f="" data-v-638cc598="">
@@ -86,13 +10,13 @@
         </a>
         <div class="hidden lg:flex w-full items-center" data-v-81ac646c="" data-v-4418274f="">
           <div class="flex-1 flex justify-start items-center" data-v-81ac646c="" data-v-4418274f="">
-            <a href="/" id="home" style="color: #ff9000;" aria-current="page" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded nuxt-link-exact-active nuxt-link-active snip-a" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
+            <a href="/" data-v-1 id="home" style="color: #ff9000;" aria-current="page" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded nuxt-link-exact-active nuxt-link-active snip-a" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
               Home
             </a>
-            <a href="/app" id="app" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded snip-a" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
+            <a href="/app" data-v-2 id="app" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded snip-a" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
               Download App
             </a>
-            <a href="/contact" id="contact" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded snip-a" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
+            <a href="/contact" data-v-3 id="contact" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded snip-a" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
               Contact
             </a>
           </div>
@@ -101,7 +25,7 @@
               <a href="/register" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded snip-a" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
                 Register
               </a>
-              <a href="/login" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded text-green hover:text-green-hover navcta snip-a" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
+              <a href="/login" class="inline-block px-5 py-2 transition-back transition-all hover:bg-header-link-hover rounded text-green hover:text-green-hover navcta" data-v-230f65e8="" data-v-4418274f="" data-v-81ac646c="">
                 Sign in
               </a>
             </div>
@@ -111,39 +35,48 @@
     </div>
     <!---->
   </header>
-  <!--
 
-      <script>
-          function activeMenu(){
-              const home = document.getElementById("home").style.background = "none";
-              const app = document.getElementById("app").style.background = "none";
-              const contact = document.getElementById("contact").style.background = "none";
-              const title = document.getElementById("activeTitle");
-              console.log(title)
-              
-              switch (title.innerHTML) {
-                  case 'Home':
-                  console.log("home")
-        home.style.background = "white";
-        break;
-      case 'Download App':
-      app.style.background = "white";
-      break;
-      case 'Contact':
-      contact.style.background = "white";
-      break;
-      
-      default:
-      break;
+
+<script>
+    function activeMenu(){
+        const home = document.getElementById("home");
+        const app = document.getElementById("app");
+        const contact = document.getElementById("contact");
+        const title = document.getElementById("activeTitle");
+
+        home.style.color = "#333";
+        app.style.color = "#333";
+        contact.style.color = "#333";
+        console.log(title)
+        
+        switch (title.innerHTML) {
+            case 'Home':
+                console.log("home")
+                home.style.color = "#ff7000";
+                break;
+            case 'Download app':
+                app.style.color = "#ff7000";
+                break;
+            case 'Contact':
+                contact.style.color = "#ff7000";
+                break;
+            default:
+            break;
     }
     
 }
 activeMenu();
--->
-  </script>
+</script>
 
 
 <style>
+
+
+a[data-v-1].active, a[data-v-2].active, a[data-v-1].active {
+    color: #ff9000 !important;   
+    background-color: red !important;
+}
+
 
 .active{
     background: white;
@@ -195,9 +128,6 @@ activeMenu();
     justify-content: center;
 } 
 
-.bg-transparent { 
-    background-color: #f2f2f2;
-} 
 
 .py-3 { 
     padding-top: 0.75rem; 
@@ -212,6 +142,7 @@ header[data-v-4418274f] {
     position: fixed; 
     width: 100%; 
     margin: 0 auto; 
+    background:#f2f2f2;
 } 
 
 *,:before,:after { 
@@ -292,7 +223,7 @@ svg {
 h2 { 
     margin:  0;
     font-size: inherit; 
-    font-weight: inherit;
+    font-weight: 200;
 } 
 
 .mr-12 { 
@@ -346,18 +277,6 @@ h2 {
     transition-duration: 150ms;
 } 
 
-.nuxt-link-exact-active[data-v-230f65e8] { 
-    --tw-bg-opacity: 1; 
-    background: white;
-    transition: 0.4s;
-} 
-
-.hover\:bg-header-link-hover:hover { 
-    --tw-bg-opacity: 1; 
-    background: white;
-    transition: 0.4s;
-} 
-
 .text-green { 
     --tw-text-opacity: 1; 
     color: rgba(0, 228, 114, var(--tw-text-opacity));
@@ -367,6 +286,9 @@ h2 {
     background: #ff9000; 
     color: #000;
 } 
+.navcta[data-v-4418274f]:hover{
+    background-color: #ff7000;
+}
 
 
 

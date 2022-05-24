@@ -19,7 +19,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #eee;
+      background: #93aac433;
       transform-origin: 0px 0px;
       transform: skewY(-10deg);
       overflow: hidden;
@@ -44,11 +44,10 @@
       bottom: 0;
     }
     .Header-content {
-      width: 70%;
-      text-align: center;
-      padding: 4rem 4rem;
-      margin: 0 auto;
+      width: 80%;
       display: flex;
+      justify-content: center;
+      text-align: center;
     }
     
     .Header-hero h1,
@@ -65,17 +64,15 @@
       font-size: 1.5rem;
       margin-bottom: 2rem;
     }
-    .Header-visuals {
+    .Header-visuals img {
+      position: relative;
+      transition: 0.5s;
+    }
+    .Header-visuals img:hover {
       position: relative;
       margin-top: 5rem;
-      transform: rotate(-10deg);
     }
-    @media (min-width: 58rem) {
-      .Header-visuals {
-        margin: 0;
-        transform: translateY(-5rem) rotate(-10deg);
-      }
-    }
+ 
     .Button-a {
       padding: 1rem 2rem;
       border: 0;
@@ -140,7 +137,7 @@
       <button class="Button-a"><a href="https://github.com/maujetstream/JetStreamWWW" target="_blank" >Download</a></button>
       </div>
       <div class="Header-visuals">
-        <img src="./images/Macbook_Pro.png" alt="app" style="width: 100%;">
+        <img src="./images/Macbook_Pro.png" alt="app" style="width: 60%;">
       </div>
     </div>
   </div>
