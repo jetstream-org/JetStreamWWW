@@ -58,7 +58,7 @@ $('#advancedS').submit(function(){
                         <div class="dep_info space">
                         <img class="flightIcon" src="./images/onboard.png" alt="icon">
                         <h1 class="title-dep"> ${result.rows[i].f_departure_name}</h1>  
-                        <p>${ result.rows[i].f_departure_date }  |  ${result.rows[i].f_departure_time}</p>
+                        <p>${ result.rows[i].f_departure_date } |${result.rows[i].f_departure_time}</p>
                         </div>
                         
                         <div class="rout-icon space">
@@ -68,7 +68,7 @@ $('#advancedS').submit(function(){
                         <div class="des_info space">
                         <img class="flightIcon" src="./images/landing.png" alt="icon">
                         <h1 class="title-des">${ result.rows[i].f_destination_name}</h1>  
-                        <p>${result.rows[i].f_destination_date}  |  ${ result.rows[i].f_destination_time }</p>
+                        <p>${result.rows[i].f_destination_date} |${ result.rows[i].f_destination_time }</p>
                        
                         <div class="btn-cont">
                             <h2>${result.rows[i].f_price} SEK</h2>
