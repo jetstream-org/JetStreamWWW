@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d8f5030-7ff7-4a47-93d9-20bbcae95a15" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/views/js/homecontrol.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/homecontrol.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parial/dashboard/dash-header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/parial/dashboard/dash-header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parial/dashboard/dash-history.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/parial/dashboard/dash-history.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parial/dashboard/table.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/parial/dashboard/table.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parial/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/parial/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parial/info.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/parial/info.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parial/map.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/parial/map.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parial/mapS.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/parial/mapS.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parial/seat.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/parial/seat.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/styles/parts/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/styles/parts/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/styles/parts/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/styles/parts/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/styles/seat.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/styles/seat.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="29bMeWXXz9rRG25jmkESiwn6zoI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d8f5030-7ff7-4a47-93d9-20bbcae95a15" name="Changes" comment="" />
+      <created>1653377427152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653377427152</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -19,6 +19,8 @@
     -webkit-box-direction: normal;
             flex-direction: column;
     border-radius: 1rem;
+    box-shadow: 1px 10px 18px #acacac;
+
   }
   .login-form h1 {
     padding: 35px 35px 0 35px;

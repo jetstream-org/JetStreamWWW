@@ -60,6 +60,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 1px 10px 18px #acacac;
 }
 
 #mapS{
