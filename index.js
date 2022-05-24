@@ -54,6 +54,7 @@ app.get('/app', (req, res)=>{
 app.post('/api', async(req, res)=>{
     const {departure, destination, depDate, desDate, nameSearch} = req.body
     try {
+        console.log(desDate + " hdiadkfnjaflavuo " + depDate);
         console.log(nameSearch + " country search" )
         await pool.query("set search_path to jetstream;")
         if(nameSearch){
@@ -61,11 +62,17 @@ app.post('/api', async(req, res)=>{
             console.log(result.rows)
             res.send(result)
         }else{
-            if(departure && destination){
+            if(departure && destination && depDate != ""){
+                result = await pool.query("select * from flight where f_departure_name = $1 and f_destination_name = $2 and f_departure_date = $3", [departure, destination,depDate])
+                console.log(result.rows)
+                console.log("dep & des");
+                res.send(result)
+            }else if(departure && destination){
                 result = await pool.query("select * from flight where f_departure_name = $1 and f_destination_name = $2", [departure, destination])
                 console.log(result.rows)
+                console.log("no dep & des");
                 res.send(result)
-            }else{
+        }else{
                 res.redirect('/')
             }
         }
