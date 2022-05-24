@@ -1,0 +1,134 @@
+<div>
+    <%- include('parial/header'); -%>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+
+        <div class="col-md-5">
+            <div class="card">
+                <h2 class="header">Registration</h2>
+                <p class="header-text">Fill in the form and join the fun!</p>
+
+                <div class="card-body py-md-4">
+                    <form id="formRegister" action="/registerUser" method="post" lpchecked="1" required>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="fName" id="fName" placeholder="First name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="lName" id="lName" placeholder="Last name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="hAddress" id="hAddress" placeholder="Home address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="cPassword" id="confirm-password" placeholder="confirm-password" required>
+                        </div>
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    a:hover {
+        color: #da5767;
+        text-decoration: none;
+    }
+
+    .card {
+
+border-radius: 1rem;       
+    top: 10%;
+        padding-top: 7vh;
+        padding-bottom: 10vh;
+    }
+
+    .form-group {
+        width: 100%;
+        margin: auto;
+    }
+
+    .form-control {
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .container {
+        border-radius: 1rem;
+        background-color: white;
+        width: 32%;
+        margin: 20vh auto;
+    }
+
+    .form-control {
+        background-color: #f8f9fa;
+        padding: 20px;
+        padding: 25px 15px;
+        margin-bottom: 1.3rem;
+    }
+
+    .form-control:focus {
+
+        color: #000000;
+        background-color: #ffffff;
+        border: 3px solid #da5767;
+        outline: 0;
+        box-shadow: none;
+    }
+    .header{
+        text-align: center;
+        font-size: larger;
+        font-weight: bold;
+    }
+    .header-text{
+        margin-bottom: 10vh;
+        text-align: center;
+    }
+    .btn {
+        justify-content: center;
+        display: flex;
+        padding: 0.6rem 1.2rem;
+        width: 80%;
+        background: #ff7000;
+    }
+
+    .btn-primary:hover {
+        background: #e46300;
+        border-radius: 10vh;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    $.ajax({
+        url:"registerUser",
+        method:"post",
+        data:$("#formRegister").serialize(),
+        success:(result)=>{
+            console.log("Successful register!")
+        }
+    })
+</script>
