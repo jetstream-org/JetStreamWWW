@@ -85,6 +85,16 @@ app.get('/dashboard', (req, res)=>{
     }
 })
 
+app.get('/register', (req, res)=>{
+    try {
+        res.render('register', {
+            title: 'Register'
+        })
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 app.post('/authUser', async(req, res)=>{
     try {
         console.log("authentication is begin")
@@ -110,8 +120,29 @@ app.post('/authUser', async(req, res)=>{
 })
 
 
-
-
+//Register user.
+app.post("/registerUser",async(req,res)=>{
+    try {
+        const {fName,lName,hAddress,email,phone,password,cPassword} = req.body
+        
+        
+        if (fName !="" && lName !="" && hAddress !="" && email !="" && phone !="" && password !="" && cPassword !=""){
+            await pool.query("set search_path to jetstream")
+            let hashPassword = md5(password)
+            console.log(fName);
+            const result = await pool.query("insert into userr(u_f_name, u_l_name, u_address, u_email, u_phone_nr, u_password, u_isadmin) values($1 , $2 , $3 , $4 , $5, $6, $7)",[fName,lName,hAddress,email,phone,hashPassword,false])
+            
+            console.log(result)
+            res.redirect('/')
+        
+    } else {
+        console.log("Info missing");
+    }
+    } catch (error) {
+        console.log(error)
+        console.log("Error: Register.")
+    }
+})
 
 
 
