@@ -2,3 +2,39 @@
     style="display: none; position: fixed; width: 100vw; height: 100vh; margin: auto; top: 0; z-index: 1; background: #9999;">
     <%- include('parial/seat'); -%>
   </div>
+
+
+
+  /* ajax sample fetch data
+
+  $.ajax({
+      url: '/bookedSeats/'+e.innerText,
+      method: 'post',
+      data: {seat: e.innerText},
+      success: (result)=>{
+          console.log(result.rows[0])
+          takenSeats = result
+      }
+      
+  })
+
+
+
+
+// taken seats
+
+  <% const st = "E"+erow+ecol; %>
+                                    <% const taken = "" %>
+
+                                    <% for(let s = 0; s < takenSeats.rows.length; s++){ %>
+                                        <% if(takenSeats.rows[s].b_seat.includes("E")){ %>
+                                            <% if(takenSeats.rows[s].b_seat == st){ %>
+                                                <% taken = srow+ecol %>
+                                                
+                                                <a style="background: #fb3585;" class="scel" id="E<%= erow %><%= ecol %>" onclick="pickMe(this)"> B<%= erow %><%= ecol %> </a> 
+                                                <%} else{ %>
+                                            <%}%>
+                                            
+                                        <%}%>
+                                    <%}%>
+                                    <% if() %>

@@ -18,7 +18,6 @@
     <i class="fa-solid fa-xmark-large"></i>
 
     <div class="switch-cont">
-      <p class="text-switch">Dark theme </p>
       <div class="thebtn">
 
         <input type="checkbox" hidden="hidden" id="username">
@@ -48,7 +47,7 @@
               <input type="text" class="dep" name="departure" id="depInput" placeholder="Departure..."
                 value="<%= typeof departure != 'undefined' ? departure : '' %>">
               <label for="depDate">Departure Date</label>
-              <input type="date" class="depDate" id="depDate">
+              <input type="date" class="depDate" name="depDate" id="depDate">
 
             </div>
             <div class="destination">
@@ -57,7 +56,7 @@
                 value="<%= typeof destination != 'undefined' ? destination : '' %>">
 
               <label for="desDate">Destination Date</label>
-              <input type="date" class="desDate" id="desDate">
+              <input type="date" class="desDate" name="desDate" id="desDate">
             </div>
 
           </div>
@@ -131,8 +130,11 @@
     <div class="flight-title">
       <h1 style="color: #999 ">List of flights.</h1>
     </div>
-    <div id="list" list>
-      no item...
+    <div class="list-cont">
+
+      <div id="list">
+        no item...
+      </div>
     </div>
     <!--
 

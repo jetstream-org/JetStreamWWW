@@ -217,7 +217,7 @@
             "DE": "Germany",
             "YE": "Yemen",
             "DZ": "Algeria",
-            "US": "United States",
+            "US": "United_States_of_America",
             "UY": "Uruguay",
             "YT": "Mayotte",
             "UM": "United States Minor Outlying Islands",
@@ -333,8 +333,8 @@
                           <p>${result.rows[i].f_destination_date} |${ result.rows[i].f_destination_time }</p>
                           <div class="btn-cont">
                           <h2>${result.rows[i].f_price} SEK</h2>
-                          <button class="searchBtn" id="${result.rows[i].f_id}" onclick="seatWindowOpen()">Detailes</button>
-                          </div>
+                          <a href="/seat/${result.rows[i].f_id}" ><button class="searchBtn" > Detailes</button></a>
+                            </div>
                       </div>
                   </div>
                   `;
