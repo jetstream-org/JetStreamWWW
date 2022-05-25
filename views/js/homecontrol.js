@@ -74,9 +74,8 @@ $('#advancedS').submit(function(){
                        
                         <div class="btn-cont">
                             <h2>${result.rows[i].f_price} SEK</h2>
-                            <a href="/seat" class="detailBtn" id="${result.rows[i].f_id}">
-                                <button class="searchBtn" id="${result.rows[i].f_id}" onclick="seatWindowOpen()">Detailes</button>
-                            </a>
+                            <a href="/seat/${result.rows[i].f_id}" ><button class="searchBtn" > Detailes</button></a>
+                            
                             </div>
 
                         </div>

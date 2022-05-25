@@ -171,13 +171,26 @@
 }
 
 
+#list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.flightlist-container .list-cont{
+  padding: 1rem;
+  height: 80vh;
+  position: relative;
+  overflow: scroll;
 
+}
 .flightlist-container{
-  width: 50%;
+  padding: 4rem;
+  background: #dfd9eac5;
+  width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 5rem;
+  justify-content: top;
+  margin-top: 3rem;
 }
 
 .flight-title h1{

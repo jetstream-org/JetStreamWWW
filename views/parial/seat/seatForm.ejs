@@ -22,15 +22,27 @@
                 <% for(let i = 0; i < info.rows.length; i++){ %>
                     <h3 style="margin: 0; color: #333;">Business seats:</h3>
                     <div class="business-seats">
-                        <% for(let b = 0; b < info.rows[i].p_seat_economy; b++){ %>
-                            <p class="scel" id="<%= b %>" onclick="pickMe(this)"> B<%= b %> </p>
+                        <% if(info.rows[i].p_seat_economy % 6 == 0){ %>
+                            <% for(let erow = 0; erow < info.rows[i].p_seat_economy / 6; erow++){ %>
+                                <% for(let ecol = 0; ecol < 6; ecol++){ %>
+                                    
+                                    <a class="scel" id="E<%= erow %><%= ecol %>" onclick="pickMe(this)"> B<%= erow %><%= ecol %> </a> 
+                            
+                                <%}%>
+                            <%}%>
                         <%}%>
                     </div>
                     <h3 style="margin: 0; color: #333;">Economy seats:</h3>
 
                     <div class="economy-seats">
-                        <% for(let e = 0; e < info.rows[i].p_seat_business; e++){ %>
-                            <p class="scel" id="<%= e %>" onclick="pickMe(this)"> E<%= e %> </p>
+                        <% if(info.rows[i].p_seat_business % 6 == 0){ %>
+                            <% for(let erow = 0; erow < info.rows[i].p_seat_business / 6; erow++){ %>
+                                <% for(let ecol = 0; ecol < 6; ecol++){ %>
+                                
+                                    <a class="scel" id="B<%= erow %><%= ecol %>" onclick="pickMe(this)"> B<%= erow %><%= ecol %> </a>
+
+                                <%}%>
+                            <%}%>
                         <%}%>
                     </div>
                     
@@ -42,8 +54,17 @@
     </div>
 </div>
 <script>
+    
+    $( document ).ready(function() {
+        console.log("ready");
+    });
     function pickMe(e){
+        var sbtns = $('[class^="scel"]');
+        for(let i = 0; i < sbtns.length; i++){
+            sbtns[i].style.cssText = "background: white"
+        }
         $("#seatno").val(e.innerText)
+        e.style.cssText = "background: #ff9000"
         console.log(e.innerText)
     }
 </script>
