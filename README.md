@@ -20,12 +20,13 @@ Java support javaFX as a tool that build desktop, mobile and other platform appl
 <h1>Start</h1>
 
 <h3>Step 1. </h3>
-<span>Clone project and run <h3> npm i </h3> in the the same directory.</span>
+<span>Clone project. run the following script in the terminal: ( npm i ) in the the same directory.</span>
 
- <p>Run script: <h2> npm run dev </h2> | ok and you are good to go! </p>
 
+<h3>Step 2. </h3>
+ <p>Run script: ( npm run dev ) in the same directory. </p>
+
+<p> you are good to go! </p>
  
- <h4>You can reach us buy the this email address: jetStream.oksh@gmail.com</h4>
- 
-  
- <h1>Good Luck</h1>
+ <p>For any forther question you can reach us buy email address: jetStream.oksh@gmail.com</p>
+
