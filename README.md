@@ -29,8 +29,6 @@ The webbapplication builed with javascript and nodejs.
  <p>Run script: ( npm run dev ) to start the server. </p>
 
  <p>You are good to go! </p>
-
-<p> you are good to go! </p>
  
  <p>For any forther question you can reach us buy email address: jetStream.oksh@gmail.com</p>
 
