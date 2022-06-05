@@ -8,7 +8,7 @@
   
 A webb based flight application with an intractive world map and geolocation support.
 The application's main goal is to serve individer with thier bookning flight in a very easy way all in one platform.
-Java support javaFX as a tool that build desktop, mobile and other platform application. Therefore we used this powerful tool to build our ui design for the application part. The webbapplication builed with javascript and nodejs.
+The webbapplication builed with javascript and nodejs.
 
 <h1>Sample:</h1>
 <p>
