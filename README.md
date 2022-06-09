@@ -26,7 +26,7 @@ The webbapplication builed with javascript and nodejs.
 <h1> How to start.</h1>
 <h3>Step 1. </h3>
   <p>Copy this link: https://github.com/jetstream-org/JetStreamWWW.git </p>
-  <p> Open your terminal and run script "git clone <link>" After cloning the project run script: npm i in the same directory. 
+  <p> Open your terminal and run script "git clone link" After cloning the project run script: npm i in the same directory. 
 <h3>Step 2. </h3>
  <p>Run script "npm run dev" to start the server. </p>
 
